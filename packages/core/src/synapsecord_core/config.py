@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from functools import lru_cache
 from typing import Literal
 
@@ -12,16 +10,17 @@ class Settings(BaseSettings):
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore",
+        env_ignore_empty=True,
     )
-    
+
     synapsecord_env: Literal["development", "test", "production"] = "development"
     synapsecord_log_level: str = "INFO"
-    
+
     discord_bot_token: str | None = None
     discord_guild_id: int | None = None
 
     postgres_host: str
-    postgres_port: int
+    postgres_port: int = 5432
     postgres_db: str
     postgres_user: str
     postgres_password: str

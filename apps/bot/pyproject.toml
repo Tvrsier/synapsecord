@@ -9,7 +9,7 @@ dependencies = [
 ]
 
 [project.scripts]
-synapsecord-bot = "synapsecord_bot.main:main"
+synapsecord-bot = "synapsecord_bot.launcher:main"
 
 [tool.uv.sources]
 synapsecord-core = { workspace = true }
