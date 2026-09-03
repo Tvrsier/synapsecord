@@ -1,0 +1,23 @@
+[project]
+name = "synapsecord-bot"
+version = "0.1.0"
+requires-python = ">=3.14"
+
+dependencies = [
+    "discord-py>=2.7.1",
+    "synapsecord-core",
+]
+
+[project.scripts]
+synapsecord-bot = "synapsecord_bot.main:main"
+
+[tool.uv.sources]
+synapsecord-core = { workspace = true }
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "synapsecord_bot"
+module-root = "src"

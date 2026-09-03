@@ -1,0 +1,26 @@
+[project]
+name = "synapsecord"
+version = "0.1.0"
+description = "Discord-based player profiling and intelligent team matchmaking platform for competitive games."
+readme = "README.md"
+requires-python = ">=3.14"
+
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.1",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.16.5",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = [
+    "apps/bot",
+    "apps/profiler",
+    "packages/core",
+]
