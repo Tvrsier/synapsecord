@@ -5,7 +5,9 @@ description = "Discord-based player profiling and intelligent team matchmaking p
 readme = "README.md"
 requires-python = ">=3.14"
 
-dependencies = []
+dependencies = [
+    "sqlalchemy>=2.0.52",
+]
 
 [dependency-groups]
 dev = [
