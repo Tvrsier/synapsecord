@@ -8,6 +8,7 @@ from synapsecord_core.config import get_settings
 from synapsecord_core.logging import get_logger
 
 from synapsecord_bot.bot.ready import ReadyState
+from synapsecord_bot.services.container import ServiceContainer
 
 logger = get_logger(__name__)
 
@@ -16,6 +17,7 @@ class SynapseCORDBot(commands.Bot):
     def __init__(self):
         self.settings = get_settings()
         self.ready_state = ReadyState()
+        self.services = ServiceContainer()
 
         intents = discord.Intents.default()
 

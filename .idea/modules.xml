@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/synapsecord.iml" filepath="$PROJECT_DIR$/.idea/synapsecord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/synapsecord-bot.iml" filepath="$PROJECT_DIR$/.idea/synapsecord-bot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/synapsecord-core.iml" filepath="$PROJECT_DIR$/.idea/synapsecord-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/synapsecord-profiler.iml" filepath="$PROJECT_DIR$/.idea/synapsecord-profiler.iml" />
+    </modules>
+  </component>
+</project>
