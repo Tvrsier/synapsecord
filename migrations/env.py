@@ -1,12 +1,10 @@
 from logging.config import fileConfig
 
+import synapsecord_core.db.models  # noqa: F401
 from alembic import context
 from sqlalchemy import engine_from_config, pool
-
 from synapsecord_core.config import get_settings
 from synapsecord_core.db.base import Base
-import synapsecord_core.db.models  # noqa: F401
-
 
 config = context.config
 

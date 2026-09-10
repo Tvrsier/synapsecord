@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.14"
 
 dependencies = [
+    "discord-py>=2.7.1",
     "pytest-asyncio>=1.4.0",
     "sqlalchemy>=2.0.52",
 ]
@@ -27,3 +28,23 @@ members = [
     "apps/profiler",
     "packages/core",
 ]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+
+[tool.ruff.lint]
+select=[
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B"
+]
+
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"

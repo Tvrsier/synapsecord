@@ -1,15 +1,15 @@
 from __future__ import annotations
 
-from synapsecord_core.db.models.game import Game
-from synapsecord_core.db.models.game_account import GameAccount
-from synapsecord_core.db.models.player_profile import PlayerProfile
+from synapsecord_core.db.models.gamemodel import GameModel
+from synapsecord_core.db.models.game_account import GameAccountModel
+from synapsecord_core.db.models.player_profile import PlayerProfileModel
 from synapsecord_core.db.models.profiling_job import ProfilingJob
-from synapsecord_core.db.models.user import User
+from synapsecord_core.db.models.usermodel import UserModel
 
 __all__ = [
-    "Game",
-    "GameAccount",
-    "PlayerProfile",
+    "GameModel",
+    "GameAccountModel",
+    "PlayerProfileModel",
     "ProfilingJob",
-    "User",
+    "UserModel",
 ]

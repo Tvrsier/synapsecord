@@ -9,7 +9,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from synapsecord_core.db.base import Base
 
 
-class GameAccount(Base):
+class GameAccountModel(Base):
     __tablename__ = "game_accounts"
     
     __table_args__ = (

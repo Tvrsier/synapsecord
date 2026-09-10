@@ -8,7 +8,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from synapsecord_core.db.base import Base
 
 
-class User(Base):
+class UserModel(Base):
     __tablename__ = "users"
     
     id: Mapped[uuid.UUID] = mapped_column(

@@ -9,7 +9,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from synapsecord_core.db.base import Base
 
 
-class PlayerProfile(Base):
+class PlayerProfileModel(Base):
     __tablename__ = "player_profiles"
 
     id: Mapped[uuid.UUID] = mapped_column(
