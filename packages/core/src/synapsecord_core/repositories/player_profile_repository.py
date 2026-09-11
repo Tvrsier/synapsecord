@@ -10,7 +10,7 @@ class PlayerProfileRepository:
     def __init__(self, session: Session):
         self._session = session
 
-    def get_current_by_game_account_id(self, game_account_id: uuid.UUID) -> PlayerProfileModel:
+    def get_current_by_game_account_id(self, game_account_id: uuid.UUID) -> PlayerProfileModel | None:
         statement = (
             select(PlayerProfileModel)
             .where(

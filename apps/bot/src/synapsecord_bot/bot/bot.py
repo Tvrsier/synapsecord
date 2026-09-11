@@ -3,8 +3,12 @@ from __future__ import annotations
 import pkgutil
 
 import discord
+from discord import DiscordException
 from discord.ext import commands
 from discord.ext.commands import Context
+
+from synapsecord_bot.context.hooks import close_request_scope
+from synapsecord_bot.errors.handlers import handle_command_error
 from synapsecord_core.config import get_settings
 from synapsecord_core.logging import get_logger
 
@@ -28,6 +32,8 @@ class SynapseCORDBot(commands.Bot):
             if self.settings.discord_guild_id is not None
             else None
         )
+
+        self.after_invoke(close_request_scope)
 
         super().__init__(
             intents=intents,
@@ -85,3 +91,11 @@ class SynapseCORDBot(commands.Bot):
             cls=SynapseApplicationContext
     ) -> SynapseApplicationContext:
         return await super().get_application_context(interaction, cls=cls)
+
+    # noinspection method-overriding
+    async def on_command_error(self, ctx: SynapseContext, error: commands.CommandError) -> None:
+        await handle_command_error(ctx, error)
+
+    # noinspection method-overriding
+    async def on_application_command_error(self, ctx: SynapseApplicationContext, error: DiscordException) -> None:
+        await handle_command_error(ctx, error)
