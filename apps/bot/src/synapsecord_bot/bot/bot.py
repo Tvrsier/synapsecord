@@ -33,8 +33,6 @@ class SynapseCORDBot(commands.Bot):
             else None
         )
 
-        self.after_invoke(close_request_scope)
-
         super().__init__(
             intents=intents,
             command_prefix=commands.when_mentioned,
@@ -43,7 +41,8 @@ class SynapseCORDBot(commands.Bot):
             auto_sync_commands=True,
         )
 
-    async def setup_hook(self) -> None:
+        self.after_invoke(close_request_scope)
+
         logger.info("bot_setup_started")
 
         self._load_cogs()
@@ -57,12 +56,18 @@ class SynapseCORDBot(commands.Bot):
 
         for module in pkgutil.iter_modules(cogs_package.__path__, prefix):
             extension = module.name
+            component = extension.rsplit(".", maxsplit=1)[-1]
+
+            self.ready_state.register(component)
+            logger.info("cog_loading", extension=extension)
 
             try:
                 self.load_extension(extension)
             except Exception:
                 logger.exception("cog_load_failed", extension=extension)
                 raise
+
+            self.ready_state.mark_ready(component)
 
             logger.info("cog_loaded", extension=extension)
 

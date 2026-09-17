@@ -19,7 +19,6 @@ def main() -> None:
 
     bot.run(
         bot.settings.discord_bot_token,
-        log_handler=None
     )
     
 if __name__ == "__main__":
