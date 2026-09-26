@@ -3,7 +3,6 @@ from datetime import UTC, datetime
 from types import SimpleNamespace
 
 import pytest
-
 from synapsecord_bot.context.base import SynapseContextMixin
 from synapsecord_bot.domains import DomainRegistry, DomainResolutionService
 from synapsecord_bot.domains.decorators import requires

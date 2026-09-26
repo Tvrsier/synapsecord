@@ -2,6 +2,7 @@ import logging
 import sys
 
 import structlog
+from structlog.typing import FilteringBoundLogger
 
 from synapsecord_core.config import get_settings
 
@@ -30,5 +31,5 @@ def configure_logging() -> None:
         cache_logger_on_first_use=True
     )
 
-def get_logger(name: str) -> structlog.BoundLogger:
+def get_logger(name: str) -> FilteringBoundLogger:
     return structlog.get_logger(name)

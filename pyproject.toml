@@ -49,3 +49,6 @@ fixable = ["ALL"]
 quote-style = "double"
 indent-style = "space"
 line-ending = "auto"
+
+[tool.ruff.lint.per-file-ignores]
+"migrations/versions/*.py" = ["E501"]

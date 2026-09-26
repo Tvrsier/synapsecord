@@ -8,8 +8,8 @@ from synapsecord_core.domain import (
     SynapseUser,
 )
 
-from synapsecord_bot.domains.registry import DomainRegistry
 from synapsecord_bot.domains import DomainResolutionService
+from synapsecord_bot.domains.registry import DomainRegistry
 from synapsecord_bot.domains.resolvers import (
     GameAccountResolver,
     PlayerProfileResolver,

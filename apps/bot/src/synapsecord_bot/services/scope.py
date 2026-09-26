@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.orm import Session, sessionmaker
 
 from synapsecord_bot.domains import DomainContext
 

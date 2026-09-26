@@ -2,10 +2,10 @@ from typing import TYPE_CHECKING
 
 from discord import slash_command
 from discord.ext import commands
+from synapsecord_core.domain import SynapseUser
 
 from synapsecord_bot.context import SynapseApplicationContext
 from synapsecord_bot.domains.decorators import requires
-from synapsecord_core.domain import SynapseUser
 
 if TYPE_CHECKING:
     from synapsecord_bot.bot import SynapseCORDBot

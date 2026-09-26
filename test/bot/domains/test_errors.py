@@ -1,14 +1,12 @@
 import pytest
 from discord import ApplicationCommandError
 from discord.ext.commands import CommandError
-
 from synapsecord_bot.domains import RequiredDomainMissingError
-from synapsecord_core.domain import SynapseUser
-
 from synapsecord_bot.errors.handlers import (
     handle_application_command_error,
     handle_command_error,
 )
+from synapsecord_core.domain import SynapseUser
 
 
 class FakeCommandContext:

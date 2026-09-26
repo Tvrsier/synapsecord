@@ -1,7 +1,6 @@
 import uuid
 
 import pytest
-
 from synapsecord_bot.context.base import SynapseContextMixin
 from synapsecord_bot.domains import MissingDomainError
 from synapsecord_bot.services.scope import ApplicationScope

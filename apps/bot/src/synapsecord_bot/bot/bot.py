@@ -6,14 +6,13 @@ import discord
 from discord import DiscordException
 from discord.ext import commands
 from discord.ext.commands import Context
-
-from synapsecord_bot.context.hooks import close_request_scope
-from synapsecord_bot.errors.handlers import handle_command_error
 from synapsecord_core.config import get_settings
 from synapsecord_core.logging import get_logger
 
 from synapsecord_bot.bot.ready import ReadyState
 from synapsecord_bot.context import SynapseApplicationContext, SynapseContext
+from synapsecord_bot.context.hooks import close_request_scope
+from synapsecord_bot.errors.handlers import handle_application_command_error, handle_command_error
 from synapsecord_bot.services.container import ServiceContainer
 
 logger = get_logger(__name__)
@@ -102,5 +101,9 @@ class SynapseCORDBot(commands.Bot):
         await handle_command_error(ctx, error)
 
     # noinspection method-overriding
-    async def on_application_command_error(self, ctx: SynapseApplicationContext, error: DiscordException) -> None:
-        await handle_command_error(ctx, error)
+    async def on_application_command_error(
+            self,
+            ctx: SynapseApplicationContext,
+            error: DiscordException
+    ) -> None:
+        await handle_application_command_error(ctx, error)

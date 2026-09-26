@@ -1,8 +1,7 @@
 from dataclasses import dataclass
 
 import pytest
-
-from apps.bot.src.synapsecord_bot.domains import (
+from synapsecord_bot.domains import (
     DomainRegistry,
     DomainResolverAlreadyRegisteredError,
     DomainResolverNotRegisteredError,

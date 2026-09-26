@@ -1,4 +1,4 @@
-from synapsecord_bot.context import SynapseContext, SynapseApplicationContext
+from synapsecord_bot.context import SynapseApplicationContext, SynapseContext
 from synapsecord_bot.context.base import SynapseContextMixin
 
 

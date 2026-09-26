@@ -1,7 +1,8 @@
-from synapsecord_bot.domains import DomainResolverContext
-from synapsecord_core.domain import PlayerProfile, SynapseUser, GameAccount
+from synapsecord_core.domain import GameAccount, PlayerProfile
 from synapsecord_core.mappers import to_player_profile
 from synapsecord_core.repositories.player_profile_repository import PlayerProfileRepository
+
+from synapsecord_bot.domains import DomainResolverContext
 
 
 class PlayerProfileResolver:

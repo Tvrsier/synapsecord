@@ -2,14 +2,16 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
+from synapsecord_core.domain import GameAccount, PlayerProfile, SynapseUser
+
 from synapsecord_bot.domains import DomainContext
-from synapsecord_core.domain import SynapseUser, GameAccount, PlayerProfile
 
 if TYPE_CHECKING:
+    import discord
+
     from synapsecord_bot.bot.bot import SynapseCORDBot
     from synapsecord_bot.services import ApplicationScope
     from synapsecord_bot.services.container import ServiceContainer
-    import discord
 
 class SynapseContextMixin:
     bot: SynapseCORDBot

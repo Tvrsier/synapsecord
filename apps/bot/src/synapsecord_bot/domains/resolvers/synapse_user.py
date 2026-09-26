@@ -1,7 +1,8 @@
-from synapsecord_bot.domains import DomainResolverContext
 from synapsecord_core.domain import SynapseUser
 from synapsecord_core.mappers import to_synapse_user
 from synapsecord_core.repositories.user_repository import UserRepository
+
+from synapsecord_bot.domains import DomainResolverContext
 
 
 class SynapseUserResolver:

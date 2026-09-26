@@ -1,7 +1,8 @@
-from synapsecord_bot.domains import DomainResolverContext
 from synapsecord_core.domain import GameAccount, SynapseUser
 from synapsecord_core.mappers import to_game_account
 from synapsecord_core.repositories.game_account_repository import GameAccountRepository
+
+from synapsecord_bot.domains import DomainResolverContext
 
 
 class GameAccountResolver:

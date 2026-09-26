@@ -1,5 +1,6 @@
+from collections.abc import Awaitable, Callable
 from functools import wraps
-from typing import ParamSpec, TypeVar, Awaitable, Callable
+from typing import ParamSpec, TypeVar
 
 from synapsecord_bot.context.base import SynapseContextMixin
 from synapsecord_bot.domains import RequiredDomainMissingError
@@ -12,7 +13,7 @@ def _find_context(args: tuple[object, ...]) -> SynapseContextMixin:
         if isinstance(arg, SynapseContextMixin):
             return arg
 
-    raise RuntimeError(f"Synapse context not found in decorated callback")
+    raise RuntimeError("Synapse context not found in decorated callback")
 
 def requires(*domain_types: type[object]) -> Callable[
     [Callable[P, Awaitable[R]]],

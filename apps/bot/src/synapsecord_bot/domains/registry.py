@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TypeVar, cast, Any
+from typing import Any, TypeVar, cast
 
 from synapsecord_bot.domains.errors import (
     DomainResolverAlreadyRegisteredError,

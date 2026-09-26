@@ -6,7 +6,7 @@ def get_error_message(error: Exception) -> str | None:
         return(
             f"Required domain "
             f"{error.domain_type.__name__} "
-            "cloud not be resolved"
+            "could not be resolved"
         )
 
     return None
