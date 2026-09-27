@@ -16,6 +16,7 @@ from synapsecord_core.integration.riot.routing import (
     region_base_url,
     region_for_platform,
 )
+from synapsecord_core.integration.riot.summoner import RiotSummoner, RiotSummonerAPI
 
 __all__ = [
     "platform_base_url",
@@ -33,4 +34,6 @@ __all__ = [
     "RiotAPIClient",
     "RiotAccount",
     "RiotAccountAPI",
+    "RiotSummoner",
+    "RiotSummonerAPI",
 ]

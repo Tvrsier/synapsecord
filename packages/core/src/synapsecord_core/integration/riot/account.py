@@ -4,7 +4,9 @@ from urllib.parse import quote
 from synapsecord_core.integration.riot.client import RiotAPIClient
 from synapsecord_core.integration.riot.errors import RiotInvalidResponseError
 from synapsecord_core.integration.riot.routing import RiotRegion
+from synapsecord_core.logging import get_logger
 
+logger = get_logger(__name__)
 
 @dataclass(frozen=True, slots=True)
 class RiotAccount:
@@ -47,6 +49,11 @@ class RiotAccountAPI:
     ) -> RiotAccount:
         if not isinstance(payload, dict):
             raise RiotInvalidResponseError("ACCOUNT-V1 returned an invalid payload")
+
+        logger.debug(
+            "riot_account_payload_received",
+            fields=sorted(payload.keys()),
+        )
 
         puuid = payload.get("puuid")
         game_name = payload.get("gameName")
