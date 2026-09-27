@@ -52,3 +52,7 @@ line-ending = "auto"
 
 [tool.ruff.lint.per-file-ignores]
 "migrations/versions/*.py" = ["E501"]
+
+[build-system]
+requires = ["uv_build>=0.12.19, <0.13"]
+build-backend = "uv_build"
