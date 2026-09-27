@@ -1280,3 +1280,9 @@ Reviewed 2026-09-24:
 Before implementing a Riot endpoint, re-check the live API Reference.
 
 Riot APIs, DTOs, rate limits, routing and policies may change independently of SynapseCORD.
+
+
+## Live test note:
+Development API key returned 403 for SEA regional routing
+(SG2/TW2) while the same key returned 200 for EUROPE,
+ASIA and AMERICAS. Routing itself matches Riot documentation.

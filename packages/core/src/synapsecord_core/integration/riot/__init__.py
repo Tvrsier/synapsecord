@@ -1,3 +1,4 @@
+from synapsecord_core.integration.riot.account import RiotAccount, RiotAccountAPI
 from synapsecord_core.integration.riot.client import RiotAPIClient
 from synapsecord_core.integration.riot.errors import (
     RiotAPIError,
@@ -29,5 +30,7 @@ __all__ = [
     "RiotNotFoundError",
     "RiotServiceUnavailableError",
     "RiotTransportError",
-    "RiotAPIClient"
+    "RiotAPIClient",
+    "RiotAccount",
+    "RiotAccountAPI",
 ]

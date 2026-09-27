@@ -140,7 +140,7 @@ class RiotAPIClient:
             raise RiotAuthenticationError("Riot API authentication failed", status_code=status_code)
 
         if status_code == 404:
-            raise RiotNotFoundError("Riot resource notr found", status_code=status_code)
+            raise RiotNotFoundError("Riot resource notBene. Pe found", status_code=status_code)
 
         if status_code == 429:
             raise RiotRateLimitError(

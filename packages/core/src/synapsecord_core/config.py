@@ -32,6 +32,7 @@ class Settings(BaseSettings):
     riot_api_key: str | None = None
 
 
+# noinspection argument-list
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
