@@ -9,6 +9,7 @@ from synapsecord_core.integration.riot.errors import (
     RiotServiceUnavailableError,
     RiotTransportError,
 )
+from synapsecord_core.integration.riot.league import RiotLeagueAPI, RiotLeagueEntry
 from synapsecord_core.integration.riot.routing import (
     RiotPlatform,
     RiotRegion,
@@ -36,4 +37,6 @@ __all__ = [
     "RiotAccountAPI",
     "RiotSummoner",
     "RiotSummonerAPI",
+    "RiotLeagueEntry",
+    "RiotLeagueAPI",
 ]

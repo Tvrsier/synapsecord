@@ -9,6 +9,7 @@ from synapsecord_core.integration.riot import (
 )
 
 
+# noinspection DuplicatedCode
 async def main() -> None:
     settings = get_settings()
 
