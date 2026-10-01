@@ -10,6 +10,7 @@ from synapsecord_core.integration.riot.errors import (
     RiotTransportError,
 )
 from synapsecord_core.integration.riot.league import RiotLeagueAPI, RiotLeagueEntry
+from synapsecord_core.integration.riot.match import RiotMatchAPI
 from synapsecord_core.integration.riot.routing import (
     RiotPlatform,
     RiotRegion,
@@ -39,4 +40,5 @@ __all__ = [
     "RiotSummonerAPI",
     "RiotLeagueEntry",
     "RiotLeagueAPI",
+    "RiotMatchAPI",
 ]
